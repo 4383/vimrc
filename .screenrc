@@ -13,4 +13,7 @@
 #deflogin on
 hardstatus string "%{= kg}[$USER]%=%{+b y}[%c:%s]%{+b y}"
 # %{= kG} => Show background in grey %{= kG}
+# [$USER] => Show user login
+# %= space with align right
+# %{+b y} => Use font bold with yellow color
 hardstatus alwayslastline 
