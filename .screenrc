@@ -1,0 +1,16 @@
+# $Id: screenrc,v 1.15 2003/10/08 11:39:03 zal Exp $
+#
+#	Created By : Hervé BERAUD
+#	Date : 27/03/2012
+#
+# Comments : Personnal screenrc, just for fun 
+# and get more knowledge about this program
+#
+# 
+# ------------------------------------------------------------------------------
+# SCREEN SETTINGS
+# ------------------------------------------------------------------------------
+#deflogin on
+hardstatus string "%{= kg}[$USER]%=%{+b y}[%c:%s]%{+b y}"
+# %{= kG} => Show background in grey %{= kG}
+hardstatus alwayslastline 
