@@ -1,20 +1,27 @@
-set nocompatible
-filetype plugin on
-syntax enable
-
+"**************************************************
+" Author        : Hervé BERAUD
+" Last update   : 29/03/2012
+" 
+" Comments      : My personnal vimrc
+"
+"
+"**************************************************
+"======================================
+" Setter la configuration
+"======================================
+"------------------------
+" Edition
+"------------------------
 set ignorecase
 set ruler
 set modeline
-
-" Forcer à montrer la commande qu'on est en train de taper :
+" Forcer à montrer la commande 
+" qu'on est en train de taper :
 set showcmd
-
 set expandtab
 set smartindent
 set shiftwidth=2
-" colorscheme darkblue
-colorscheme desert
-
+set nocompatible
 " jamais de flash :
 set vb t_vb=
 set backup
@@ -27,6 +34,12 @@ set scrolloff=5
 
 " 1000 undos
 set undolevels=1000
+filetype plugin on
+syntax enable
+
+" colorscheme darkblue
+colorscheme desert
+
 
 
 " Pour transférer la ligne en cours dans un fichier temporaire
@@ -52,7 +65,9 @@ set mouse=a
 "# Mapper le NERDTree pour accès
 "#
 "########################################
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+if filereadable(".vim/plugin/NERDTree") > 0
+  nmap <silent> <c-n> :NERDTreeToggle<CR>
+endif
 
 "########################################
 "#
@@ -122,5 +137,5 @@ set nopaste
 
 " Afficher les caractères invibles
 set list
-set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<,eol:¶,trail:·
+set listchars=nbsp:¤,tab:>-,extends:>,precedes:<,eol:¶
 
