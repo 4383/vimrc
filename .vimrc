@@ -62,10 +62,6 @@ nmap <silent> <c-n> :NERDTreeToggle<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
-" highlight current line
-"set cul
-" adjust color
-"hi CursorLine term=none cterm=none ctermbg=4
 
 " Tell vim to remember certain things when we exit
 "  '10 : marks will be remembered for up to 10 previously edited files
@@ -123,4 +119,8 @@ let g:snips_author='Hervé Beraud'
 
 " (!) Ultra important sinon *tous* les mappings sont désactivés :
 set nopaste
+
+" Afficher les caractères invibles
+set list
+set listchars=nbsp:¤,tab:>-,trail:¤,extends:>,precedes:<,eol:¶,trail:·
 
