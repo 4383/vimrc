@@ -38,7 +38,7 @@ filetype plugin on
 syntax enable
 
 " colorscheme darkblue
-colorscheme desert
+"colorscheme desert
 
 
 
@@ -139,3 +139,19 @@ set nopaste
 set list
 set listchars=nbsp:¤,tab:>-,extends:>,precedes:<,eol:¶
 
+" Change cursor color 
+" WHITE   = edit mode
+" GREEN   = Command mode
+" ORANGE  = 
+if !has("gui_running")
+  let &t_SI = "\033]12;white\007"
+  let &t_EI = "\033]12;green\007"
+ 
+  :silent !echo -ne "\033]12;orange\007"
+  autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
+endif
+
+" Définir une tabulation de 4 pour l'édition de scripts python
+" pour être pylint compliance
+autocmd BufRead,BufNewFile *.py set tabstop=4
+autocmd FileType python compiler pylint

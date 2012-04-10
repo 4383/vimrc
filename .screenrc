@@ -11,8 +11,8 @@
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
 #deflogin on
-hardstatus string "%{= kg}[$USER]%=%{+b y}[%c:%s]%{+b y}"
-# %{= kG} => Show background in grey %{= kG}
+hardstatus string "%{= kg}[$USER] %=[%{+b r}%l] %{+b r}%=%{+b y}[%c:%s]%{+b y}"
+# %{= kG} => Show background in black
 # [$USER] => Show user login
 # %= space with align right
 # %{+b y} => Use font bold with yellow color
