@@ -150,3 +150,5 @@ if !has("gui_running")
   :silent !echo -ne "\033]12;orange\007"
   autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
 endif
+
+autocmd FileType python compiler pylint
