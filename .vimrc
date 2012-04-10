@@ -151,4 +151,7 @@ if !has("gui_running")
   autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
 endif
 
+" Définir une tabulation de 4 pour l'édition de scripts python
+" pour être pylint compliance
+autocmd BufRead,BufNewFile *.py set tabstop=4
 autocmd FileType python compiler pylint
