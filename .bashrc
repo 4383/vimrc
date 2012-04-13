@@ -7,6 +7,7 @@ Cyan="\033[0;36m"
 Green="\033[0;32m"
 Red="\033[0;31m"
 Yellow="\033[0;33m"
+Magenta="\033[0;46m"
 
 # Chars
 RootPrompt="\#"
@@ -41,9 +42,9 @@ if [ $? -eq 0 ]; then
 fi
 
 if [ $EUID -ne 0 ]; then
-  PS1=$LEFTPROMPT"\[$NoColor\] "$NonRootPrompt" "
+  PS1=$LEFTPROMPT" \[$Magenta\]"$NonRootPrompt"\[$NoColor\] "
 else
-  PS1=$LEFTPROMPT"\[$NoColor\] "$RootPrompt" "
+  PS1=$LEFTPROMPT" \[$Magenta\]"$RootPrompt"\[$NoColor\] "
 fi
 
 # echo -e -n $LEFTPROMPT
@@ -52,14 +53,14 @@ fi
 # Define PROMPT_COMMAND if not already defined (fix: Modifying title on SSH connections)
 if [ -z "$PROMPT_COMMAND" ]; then
   case $TERM in
-  xterm*)
-  PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
-  ;;
-  screen)
-  PROMPT_COMMAND='printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
-  ;;
+    xterm*)
+      PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+    ;;
+    screen)
+      PROMPT_COMMAND='printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+    ;;
   esac
-  fi
+fi
    
 # Main prompt
 PROMPT_COMMAND="prompt;$PROMPT_COMMAND"
