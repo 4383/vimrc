@@ -6,6 +6,7 @@ NoColor="\033[0m"
 Cyan="\033[0;36m"
 Green="\033[0;32m"
 Red="\033[0;31m"
+BRed="\033[0;41m"
 Yellow="\033[0;33m"
 Magenta="\033[0;46m"
 
@@ -42,9 +43,9 @@ if [ $? -eq 0 ]; then
 fi
 
 if [ $EUID -ne 0 ]; then
-  PS1=$LEFTPROMPT" \[$Magenta\]"$NonRootPrompt"\[$NoColor\] "
+  PS1=$LEFTPROMPT" \[$BRed\]"$NonRootPrompt"\[$NoColor\] "
 else
-  PS1=$LEFTPROMPT" \[$Magenta\]"$RootPrompt"\[$NoColor\] "
+  PS1=$LEFTPROMPT" \[$BRed\]"$RootPrompt"\[$NoColor\] "
 fi
 
 # echo -e -n $LEFTPROMPT
