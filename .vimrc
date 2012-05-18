@@ -151,6 +151,32 @@ if !has("gui_running")
   autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
 endif
 
+
+colorscheme delek
+map <C-t> :tabnew<CR>
+
+"===========================================================
+"python configuration spécial
+"===========================================================
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+set omnifunc=pythoncomplete#Complete
+imap <C-Space> <C-x><C-o>
+
+autocmd BufWrite *.py silent! %s/[\r \t]\+$//
+
+" Executer le fichier courrant 
+map <buffer> <F5> :w<CR>:!/usr/bin/env python % <CR>
+
+" Ouvrir les modules puthon grace à gf
+python << EOF
+import os
+import sys
+import vim
+for p in sys.path:
+  if os.path.isdir(p):
+    vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+EOF
+
 " Définir une tabulation de 4 pour l'édition de scripts python
 " pour être pylint compliance
 autocmd BufRead,BufNewFile *.py set tabstop=4
