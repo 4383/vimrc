@@ -158,9 +158,7 @@ map <C-t> :tabnew<CR>
 "===========================================================
 "python configuration spécial
 "===========================================================
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
-set omnifunc=pythoncomplete#Complete
-imap <C-Space> <C-x><C-o>
+"imap <C-Space> <C-x><C-o>
 
 autocmd BufWrite *.py silent! %s/[\r \t]\+$//
 
