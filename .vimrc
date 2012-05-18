@@ -1,6 +1,6 @@
 "**************************************************
 " Author        : Hervé BERAUD
-" Last update   : 29/03/2012
+" Last update   : 18/05/2012
 " 
 " Comments      : My personnal vimrc
 "
