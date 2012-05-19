@@ -12,6 +12,7 @@
 "------------------------
 " Edition
 "------------------------
+filetype plugin on
 set ignorecase
 set ruler
 set modeline
@@ -34,7 +35,6 @@ set scrolloff=5
 
 " 1000 undos
 set undolevels=1000
-filetype plugin on
 syntax enable
 
 " colorscheme darkblue
@@ -77,6 +77,12 @@ set mouse=a
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+
+"#########################################
+" AutoCompletion python
+"#########################################
+let g:pydiction_location = '/home/rv/.vim/vimfiles/ftplugin/pydiction/complete-dict'
+let g:pydiction_menu_height = 20
 
 " Tell vim to remember certain things when we exit
 "  '10 : marks will be remembered for up to 10 previously edited files
