@@ -10,6 +10,8 @@ BRed="\033[0;41m"
 Yellow="\033[0;33m"
 Magenta="\033[0;46m"
 
+Gras="\033[0;01m"
+
 # Chars
 RootPrompt="\#"
 NonRootPrompt="\$"

@@ -29,6 +29,8 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set fileencodings=utf-8,ucs-bom,default,latin1
+" Folder les fonctions par défaut
+set foldmethod=indent
 
 " keep at least 5 lines above/below
 set scrolloff=5
