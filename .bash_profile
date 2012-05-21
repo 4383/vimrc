@@ -11,14 +11,3 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-## run conky
-#pkill conky
-#conky -c ~/.conky/weather.conky &
-#conky -c ~/.conky/conkyrc &
-#
-#
-## run conky
-#pkill conky
-#conky -c ~/.conky/weather.conky &
-#conky -c ~/.conky/conkyrc &
-
