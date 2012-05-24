@@ -156,6 +156,8 @@ endif
 
 colorscheme delek
 map <C-t> :tabnew<CR>
+map <C-h> :tabprevious<CR>
+map <C-l> :tabnext<CR>
 
 "===========================================================
 "python configuration spécial
