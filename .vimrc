@@ -158,6 +158,7 @@ colorscheme delek
 map <C-t> :tabnew<CR>
 map <C-h> :tabprevious<CR>
 map <C-l> :tabnext<CR>
+map <S-q> :tabclose<CR>
 
 "===========================================================
 "python configuration spécial
