@@ -185,3 +185,6 @@ export PATH=$PATH:/home/rv/Bin
 # make bash autocomplete with up arrow
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
+
+# Sets the Mail Environment Variable
+MAIL=/var/spool/mail/herve && export MAIL
