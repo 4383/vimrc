@@ -182,6 +182,8 @@ fi
 # Repertoire des executable perso
 export PATH=$PATH:/home/rv/Bin
 
+export PYTHONSTARTUP=~/.pythonrc
+
 # make bash autocomplete with up arrow
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
