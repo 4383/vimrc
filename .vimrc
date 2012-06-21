@@ -67,9 +67,7 @@ set mouse=a
 "# Mapper le NERDTree pour accès
 "#
 "########################################
-if filereadable(".vim/plugin/NERDTree") > 0
-  nmap <silent> <c-n> :NERDTreeToggle<CR>
-endif
+nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 "########################################
 "#
