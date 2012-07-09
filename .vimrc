@@ -180,5 +180,6 @@ EOF
 
 " Définir une tabulation de 4 pour l'édition de scripts python
 " pour être pylint compliance
+autocmd BufNewFile  * silent! 0r ~/.vim/templates/%:e.tpl
 autocmd BufRead,BufNewFile *.py set tabstop=4
 autocmd FileType python compiler pylint
