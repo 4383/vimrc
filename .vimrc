@@ -127,7 +127,6 @@ function! s:align()
   endif
 endfunction
 
-autocmd BufNewFile  * silent! 0r ~/.vim/templates/%:e.tpl
 autocmd BufNewFile  *.php call search('w', '', line("w$"))
 
 let g:snips_author='Hervé Beraud'
