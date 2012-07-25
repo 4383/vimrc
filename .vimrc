@@ -167,7 +167,7 @@ autocmd BufWrite *.py silent! %s/[\r \t]\+$//
 " Executer le fichier courrant 
 map <buffer> <F5> :w<CR>:!/usr/bin/env python % <CR>
 
-" Ouvrir les modules puthon grace à gf
+" Ouvrir les modules python grace à gf
 python << EOF
 import os
 import sys
