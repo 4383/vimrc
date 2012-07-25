@@ -189,3 +189,5 @@ EOF
 autocmd BufNewFile  * silent! 0r ~/.vim/templates/%:e.tpl
 autocmd BufRead,BufNewFile *.py set tabstop=4
 autocmd FileType python compiler pylint
+
+set tags=tags
