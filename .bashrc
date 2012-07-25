@@ -176,13 +176,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Repertoire des executable perso
-export PATH=$PATH:/home/rv/Bin
+if [ -d /home/rv ]; then
+  export PATH=$PATH:/home/rv/Bin
+else
+  export PATH=$PATH:/home/dev/Bin 
+fi
 
-<<<<<<< HEAD
 EDITOR=/usr/bin/vim
-=======
 export PYTHONSTARTUP=$HOME/.pystartup
->>>>>>> c08be11a1c3d7516761a67029b5e017d567ce67d
 
 # make bash autocomplete with up arrow
 bind '"\e[A":history-search-backward'

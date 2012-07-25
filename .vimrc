@@ -67,13 +67,9 @@ set mouse=a
 "# Mapper le NERDTree pour accès
 "#
 "########################################
-<<<<<<< HEAD
 "if filereadable(".vim/plugin/NERDTree") > 0
   nmap <silent> <c-n> :NERDTreeToggle<CR>
 "endif
-=======
-nmap <silent> <c-n> :NERDTreeToggle<CR>
->>>>>>> c08be11a1c3d7516761a67029b5e017d567ce67d
 
 "########################################
 "#
@@ -178,18 +174,6 @@ autocmd BufWrite *.py silent! %s/[\r \t]\+$//
 
 " Executer le fichier courrant 
 map <buffer> <F5> :w<CR>:!/usr/bin/env python % <CR>
-
-<<<<<<< HEAD
-" Ouvrir les modules puthon grace à gf
-"python << EOF
-"import os
-"import sys
-"import vim
-"for p in sys.path:
-"  if os.path.isdir(p):
-"    vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-"EOF
-=======
 " Ouvrir les modules python grace à gf
 python << EOF
 import os
@@ -199,7 +183,6 @@ for p in sys.path:
   if os.path.isdir(p):
     vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
->>>>>>> c08be11a1c3d7516761a67029b5e017d567ce67d
 
 " Définir une tabulation de 4 pour l'édition de scripts python
 " pour être pylint compliance
