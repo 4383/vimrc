@@ -189,11 +189,8 @@ export PYTHONSTARTUP=$HOME/.pystartup
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-<<<<<<< HEAD
-=======
 # Sets the Mail Environment Variable
 MAIL=/var/spool/mail/herve && export MAIL
 
 # Basculer le mode de saisie du terminal en mode vim
 #set -o vi
->>>>>>> c08be11a1c3d7516761a67029b5e017d567ce67d
