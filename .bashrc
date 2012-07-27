@@ -176,11 +176,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Repertoire des executable perso
-if [ -d /home/rv ]; then
-  export PATH=$PATH:/home/rv/Bin
-else
-  export PATH=$PATH:/home/dev/Bin 
-fi
+export PATH=$PATH:~/Bin
 
 EDITOR=/usr/bin/vim
 export PYTHONSTARTUP=$HOME/.pystartup
