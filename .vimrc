@@ -191,3 +191,9 @@ autocmd BufRead,BufNewFile *.py set tabstop=4
 autocmd FileType python compiler pylint
 
 set tags=tags
+
+" Définir le système de traduction par défaut français
+augroup filetypedetect
+  au BufNewFile,BufRead mutt-* setlocal spell spelllang=fr
+  au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+augroup END
