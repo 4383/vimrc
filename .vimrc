@@ -190,10 +190,14 @@ autocmd BufNewFile  * silent! 0r ~/.vim/templates/%:e.tpl
 autocmd BufRead,BufNewFile *.py set tabstop=4
 autocmd FileType python compiler pylint
 
+" Récupérer les fichiers de tags dans le répertoire courant
+" pour permettre l'autocomplétion
 set tags=tags
 
 " Définir le système de traduction par défaut français
 augroup filetypedetect
-  au BufNewFile,BufRead mutt-* setlocal spell spelllang=fr
-  au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+  if expand("%:p:h") !~ '^/home/dirind'
+    au BufNewFile,BufRead mutt-* setlocal spell spelllang=fr
+    au BufNewFile,BufRead *.txt setlocal spell spelllang=fr
+  endif
 augroup END
