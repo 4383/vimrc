@@ -56,7 +56,7 @@ nmap ;a :. w! >>~/.vimxfer<CR>
 nmap <F5> Oecho "<pre>".var_export(<ESC>pA,true)."</pre>";<ESC>
 nmap <F6> <ESC><ESC>ev?\$<RETURN>"ayA<RETURN><ESC>^i$this->Dump(<ESC>"apA);<ESC>
 
-set tabstop=2
+set tabstop=4
 set nohlsearch
 set autoindent
 set number
